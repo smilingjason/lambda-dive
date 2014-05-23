@@ -14,6 +14,9 @@ public class MethodRefTest {
     interface Foo {
         public String op();
     }
+    interface Bar {
+        public String op(MRPerson p);
+    }
 
     interface DefaultFactory {
         public MRPerson make();
@@ -21,10 +24,20 @@ public class MethodRefTest {
     interface Factory {
         public MRPerson make(String name);
     }
+
+    public String toUpper(MRPerson p, Bar bar) {
+        String a = bar.op(p);
+        return a.toUpperCase();
+    }
     public void testInstanceMethodRef() {
         MRPerson p = new MRPerson("Jason");
         Foo foo = p::getName;
         assertEquals(foo.op(), "Jason");
+    }
+    public void testInstanceMethodRef2() {
+        MRPerson p = new MRPerson("Jason");
+        String result =  toUpper(p, MRPerson::getName);
+        assertEquals(result, "JASON");
     }
     public void testStaticMethodRef() {
         Foo foo = MRPerson::getClassName;
