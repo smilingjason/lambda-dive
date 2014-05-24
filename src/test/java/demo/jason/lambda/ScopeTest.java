@@ -15,7 +15,7 @@ public class ScopeTest {
     }
 
     interface Bar {
-        public Object whoisthis();
+        public Object whoami();
     }
 
     class FirstLevel implements Foo {
@@ -49,7 +49,7 @@ public class ScopeTest {
      **/ 
     public void testThis() {
         Bar bar = () -> this;
-        Object o = bar.whoisthis();
+        Object o = bar.whoami();
         assertTrue(o instanceof ScopeTest);
     }
 }
