@@ -26,18 +26,51 @@ public class StreamTest {
         //find the sum of all even-value elements
         assertEquals(numbers.stream()
                             .filter(value -> value % 2 == 0)
-                            .mapToInt(value -> value)
+                            .mapToInt(StreamTest::map)
                             .sum(), 20);
         //find the sum of all odd-value elements
         assertEquals(numbers.stream()
                             .filter(value -> value % 2 != 0)
-                            .mapToInt(value -> value)
+                            .mapToInt(StreamTest::map)
                             .sum(), 25);
     }
 
     public static int map(int value) {
-        System.out.println("Thread id for :" + value 
-                + " is " + Thread.currentThread().getId());
         return value;
+    }
+
+    public void testParrelStream() {
+        int[] a = new int[1024 * 1024 * 10];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = i;
+        }
+        Set threadSet = new HashSet();
+        //first, test with sequential stream
+        long start = System.nanoTime();
+        Arrays.stream(a)
+              .map(v -> {
+                  //save the thread id 
+                  threadSet.add(Thread.currentThread().getId());
+                  return v;
+              })
+              .sum();
+        long end = System.nanoTime();
+        System.out.println("sequential: " + (end - start) / 1.0e6);
+        assertEquals(threadSet.size(), 1);      
+        //then, test with parellel
+        threadSet.clear();
+        start = System.nanoTime();
+        Arrays.stream(a)
+              .parallel()
+              .map(v -> {
+                  //save the thread id 
+                  threadSet.add(Thread.currentThread().getId());
+                  return v;
+              })
+              .sum();        
+        end = System.nanoTime();
+        System.out.println("parallel: " + (end - start) / 1.0e6 
+                + " with thread count: " + threadSet.size());
+        assertTrue(threadSet.size() > 1);      
     }
 }
