@@ -17,7 +17,11 @@ public class StreamTest {
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9);
         //find the sum of all elements
         assertEquals(numbers.stream()
-                            .mapToInt(value -> value)
+                            .mapToInt(StreamTest::map)
+                            .sum(), 45);
+        //find the sum of all elements in parallel way
+        assertEquals(numbers.parallelStream()
+                            .mapToInt(StreamTest::map)
                             .sum(), 45);
         //find the sum of all even-value elements
         assertEquals(numbers.stream()
@@ -29,5 +33,11 @@ public class StreamTest {
                             .filter(value -> value % 2 != 0)
                             .mapToInt(value -> value)
                             .sum(), 25);
+    }
+
+    public static int map(int value) {
+        System.out.println("Thread id for :" + value 
+                + " is " + Thread.currentThread().getId());
+        return value;
     }
 }
