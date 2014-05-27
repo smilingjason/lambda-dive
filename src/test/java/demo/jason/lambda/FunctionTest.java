@@ -6,6 +6,7 @@ import org.testng.annotations.*;
 import java.util.function.*;
 
 /**
+ * Test cases for class java.util.function.Function.
  * @author Jason Huang
  **/
 

@@ -8,7 +8,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
- * @Author Jason Huang
+ * @author Jason Huang
  **/
 
 @Test

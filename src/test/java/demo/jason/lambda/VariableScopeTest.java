@@ -6,6 +6,7 @@ import static org.testng.Assert.assertTrue;
 
 /**
  * Lambda doesn't introduce any new variable scope, and it will reference the variables in enclosing block.
+ * @author Jason Huang
  **/ 
 public class VariableScopeTest { 
     int i = 100; 

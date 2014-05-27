@@ -7,7 +7,7 @@ import java.util.stream.*;
 import java.util.*;
 import java.util.concurrent.atomic.*;
 /**
- * @Author Jason Huang
+ * @auhor Jason Huang
  **/
 
 @Test
