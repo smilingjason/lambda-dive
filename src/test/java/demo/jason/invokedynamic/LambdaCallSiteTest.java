@@ -8,7 +8,7 @@ import static java.lang.invoke.MethodHandles.*;
 import static java.lang.invoke.MethodType.*;
 
 /**
- * This test case dive into the implementation of lambda express.
+ * This test case dive into the implementation of lambda expression.
  * Generally, Java SE 8 levearge invokedynamic jvm instruction to implement 
  * lambda expression. The initial call flow is:
  * 1) call the bootstrap method LambdaMetafactory.metafactory to get a dynamic call site

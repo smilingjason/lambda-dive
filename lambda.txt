@@ -1,0 +1,513 @@
+Classfile /home/jason/jdk8apps/lambda-dive/target/test-classes/demo/jason/invokedynamic/LambdaCallSiteTest.class
+  Last modified May 27, 2014; size 4022 bytes
+  MD5 checksum 246a8a07f9f969d689d58f122a085f37
+  Compiled from "LambdaCallSiteTest.java"
+public class demo.jason.invokedynamic.LambdaCallSiteTest
+  SourceFile: "LambdaCallSiteTest.java"
+  RuntimeVisibleAnnotations:
+    0: #88()
+  InnerClasses:
+       static #42= #16 of #17; //Foo=class demo/jason/invokedynamic/LambdaCallSiteTest$Foo of class demo/jason/invokedynamic/LambdaCallSiteTest
+       public static final #65= #64 of #110; //Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+  BootstrapMethods:
+    0: #95 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+      Method arguments:
+        #96 (Ljava/lang/String;)Ljava/lang/String;
+        #97 invokespecial demo/jason/invokedynamic/LambdaCallSiteTest.lambda$new$1:(Ljava/lang/String;)Ljava/lang/String;
+        #96 (Ljava/lang/String;)Ljava/lang/String;
+    1: #95 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+      Method arguments:
+        #96 (Ljava/lang/String;)Ljava/lang/String;
+        #134 invokestatic demo/jason/invokedynamic/LambdaCallSiteTest.lambda$aaa$0:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        #96 (Ljava/lang/String;)Ljava/lang/String;
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+    #1 = Methodref          #41.#89       //  java/lang/Object."<init>":()V
+    #2 = String             #90           //  Jason Huang
+    #3 = Fieldref           #17.#91       //  demo/jason/invokedynamic/LambdaCallSiteTest.name:Ljava/lang/String;
+    #4 = String             #92           //  abc
+    #5 = Fieldref           #17.#93       //  demo/jason/invokedynamic/LambdaCallSiteTest.a:Ljava/lang/String;
+    #6 = InvokeDynamic      #0:#98        //  #0:bar:(Ldemo/jason/invokedynamic/LambdaCallSiteTest;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+    #7 = Fieldref           #17.#99       //  demo/jason/invokedynamic/LambdaCallSiteTest.f:Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+    #8 = Class              #100          //  java/lang/StringBuilder
+    #9 = Methodref          #8.#89        //  java/lang/StringBuilder."<init>":()V
+   #10 = String             #101          //  Hello, 
+   #11 = Methodref          #8.#102       //  java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   #12 = Methodref          #8.#103       //  java/lang/StringBuilder.toString:()Ljava/lang/String;
+   #13 = String             #104          //  Hello static, 
+   #14 = Class              #105          //  java/lang/String
+   #15 = Methodref          #106.#107     //  java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+   #16 = Class              #108          //  demo/jason/invokedynamic/LambdaCallSiteTest$Foo
+   #17 = Class              #109          //  demo/jason/invokedynamic/LambdaCallSiteTest
+   #18 = Methodref          #110.#111     //  java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+   #19 = Methodref          #64.#112      //  java/lang/invoke/MethodHandles$Lookup.lookupClass:()Ljava/lang/Class;
+   #20 = String             #56           //  sayHello
+   #21 = Methodref          #64.#113      //  java/lang/invoke/MethodHandles$Lookup.findVirtual:(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+   #22 = String             #114          //  bar
+   #23 = Methodref          #115.#116     //  java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #24 = Methodref          #117.#118     //  java/lang/invoke/CallSite.getTarget:()Ljava/lang/invoke/MethodHandle;
+   #25 = Methodref          #119.#120     //  java/lang/invoke/MethodHandle.invoke:(Ldemo/jason/invokedynamic/LambdaCallSiteTest;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+   #26 = String             #121          //  Jason
+   #27 = InterfaceMethodref #16.#122      //  demo/jason/invokedynamic/LambdaCallSiteTest$Foo.bar:(Ljava/lang/String;)Ljava/lang/String;
+   #28 = String             #123          //  Hello, Jason
+   #29 = Methodref          #124.#125     //  org/testng/Assert.assertEquals:(Ljava/lang/String;Ljava/lang/String;)V
+   #30 = Class              #126          //  java/lang/Throwable
+   #31 = Methodref          #30.#127      //  java/lang/Throwable.printStackTrace:()V
+   #32 = Methodref          #30.#128      //  java/lang/Throwable.getMessage:()Ljava/lang/String;
+   #33 = Methodref          #124.#129     //  org/testng/Assert.fail:(Ljava/lang/String;)V
+   #34 = Methodref          #106.#130     //  java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+   #35 = String             #58           //  sayHelloStatic
+   #36 = Methodref          #64.#131      //  java/lang/invoke/MethodHandles$Lookup.findStatic:(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+   #37 = Methodref          #119.#132     //  java/lang/invoke/MethodHandle.invoke:()Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+   #38 = String             #133          //  Hello static, Jason
+   #39 = String             #80           //  local
+   #40 = InvokeDynamic      #1:#135       //  #1:bar:(Ljava/lang/String;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+   #41 = Class              #136          //  java/lang/Object
+   #42 = Utf8               Foo
+   #43 = Utf8               InnerClasses
+   #44 = Utf8               name
+   #45 = Utf8               Ljava/lang/String;
+   #46 = Utf8               a
+   #47 = Utf8               f
+   #48 = Utf8               Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+   #49 = Utf8               <init>
+   #50 = Utf8               ()V
+   #51 = Utf8               Code
+   #52 = Utf8               LineNumberTable
+   #53 = Utf8               LocalVariableTable
+   #54 = Utf8               this
+   #55 = Utf8               Ldemo/jason/invokedynamic/LambdaCallSiteTest;
+   #56 = Utf8               sayHello
+   #57 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+   #58 = Utf8               sayHelloStatic
+   #59 = Utf8               testLambdaCallSiteWithPrivateInstanceMethod
+   #60 = Utf8               type
+   #61 = Utf8               Ljava/lang/invoke/MethodType;
+   #62 = Utf8               invokedtype
+   #63 = Utf8               lookup
+   #64 = Class              #137          //  java/lang/invoke/MethodHandles$Lookup
+   #65 = Utf8               Lookup
+   #66 = Utf8               Ljava/lang/invoke/MethodHandles$Lookup;
+   #67 = Utf8               thisClass
+   #68 = Utf8               Ljava/lang/Class;
+   #69 = Utf8               Ljava/lang/invoke/MethodHandle;
+   #70 = Utf8               callsite
+   #71 = Utf8               Ljava/lang/invoke/CallSite;
+   #72 = Utf8               r
+   #73 = Utf8               t
+   #74 = Utf8               Ljava/lang/Throwable;
+   #75 = Utf8               StackMapTable
+   #76 = Class              #126          //  java/lang/Throwable
+   #77 = Utf8               testLambdaCallSiteWithPrivateStaticInstanceMethod
+   #78 = Utf8               aaa
+   #79 = Utf8               ()Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+   #80 = Utf8               local
+   #81 = Utf8               lambda$new$1
+   #82 = Utf8               s
+   #83 = Utf8               lambda$aaa$0
+   #84 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   #85 = Utf8               SourceFile
+   #86 = Utf8               LambdaCallSiteTest.java
+   #87 = Utf8               RuntimeVisibleAnnotations
+   #88 = Utf8               Lorg/testng/annotations/Test;
+   #89 = NameAndType        #49:#50       //  "<init>":()V
+   #90 = Utf8               Jason Huang
+   #91 = NameAndType        #44:#45       //  name:Ljava/lang/String;
+   #92 = Utf8               abc
+   #93 = NameAndType        #46:#45       //  a:Ljava/lang/String;
+   #94 = Utf8               BootstrapMethods
+   #95 = MethodHandle       #6:#23        //  invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+   #96 = MethodType         #57           //  (Ljava/lang/String;)Ljava/lang/String;
+   #97 = MethodHandle       #7:#138       //  invokespecial demo/jason/invokedynamic/LambdaCallSiteTest.lambda$new$1:(Ljava/lang/String;)Ljava/lang/String;
+   #98 = NameAndType        #114:#139     //  bar:(Ldemo/jason/invokedynamic/LambdaCallSiteTest;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+   #99 = NameAndType        #47:#48       //  f:Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+  #100 = Utf8               java/lang/StringBuilder
+  #101 = Utf8               Hello, 
+  #102 = NameAndType        #140:#141     //  append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #103 = NameAndType        #142:#143     //  toString:()Ljava/lang/String;
+  #104 = Utf8               Hello static, 
+  #105 = Utf8               java/lang/String
+  #106 = Class              #144          //  java/lang/invoke/MethodType
+  #107 = NameAndType        #145:#146     //  methodType:(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+  #108 = Utf8               demo/jason/invokedynamic/LambdaCallSiteTest$Foo
+  #109 = Utf8               demo/jason/invokedynamic/LambdaCallSiteTest
+  #110 = Class              #147          //  java/lang/invoke/MethodHandles
+  #111 = NameAndType        #63:#148      //  lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+  #112 = NameAndType        #149:#150     //  lookupClass:()Ljava/lang/Class;
+  #113 = NameAndType        #151:#152     //  findVirtual:(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+  #114 = Utf8               bar
+  #115 = Class              #153          //  java/lang/invoke/LambdaMetafactory
+  #116 = NameAndType        #154:#155     //  metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #117 = Class              #156          //  java/lang/invoke/CallSite
+  #118 = NameAndType        #157:#158     //  getTarget:()Ljava/lang/invoke/MethodHandle;
+  #119 = Class              #159          //  java/lang/invoke/MethodHandle
+  #120 = NameAndType        #160:#139     //  invoke:(Ldemo/jason/invokedynamic/LambdaCallSiteTest;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+  #121 = Utf8               Jason
+  #122 = NameAndType        #114:#57      //  bar:(Ljava/lang/String;)Ljava/lang/String;
+  #123 = Utf8               Hello, Jason
+  #124 = Class              #161          //  org/testng/Assert
+  #125 = NameAndType        #162:#163     //  assertEquals:(Ljava/lang/String;Ljava/lang/String;)V
+  #126 = Utf8               java/lang/Throwable
+  #127 = NameAndType        #164:#50      //  printStackTrace:()V
+  #128 = NameAndType        #165:#143     //  getMessage:()Ljava/lang/String;
+  #129 = NameAndType        #166:#167     //  fail:(Ljava/lang/String;)V
+  #130 = NameAndType        #145:#168     //  methodType:(Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+  #131 = NameAndType        #169:#152     //  findStatic:(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+  #132 = NameAndType        #160:#79      //  invoke:()Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+  #133 = Utf8               Hello static, Jason
+  #134 = MethodHandle       #6:#170       //  invokestatic demo/jason/invokedynamic/LambdaCallSiteTest.lambda$aaa$0:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #135 = NameAndType        #114:#171     //  bar:(Ljava/lang/String;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+  #136 = Utf8               java/lang/Object
+  #137 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #138 = Methodref          #17.#172      //  demo/jason/invokedynamic/LambdaCallSiteTest.lambda$new$1:(Ljava/lang/String;)Ljava/lang/String;
+  #139 = Utf8               (Ldemo/jason/invokedynamic/LambdaCallSiteTest;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+  #140 = Utf8               append
+  #141 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #142 = Utf8               toString
+  #143 = Utf8               ()Ljava/lang/String;
+  #144 = Utf8               java/lang/invoke/MethodType
+  #145 = Utf8               methodType
+  #146 = Utf8               (Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+  #147 = Utf8               java/lang/invoke/MethodHandles
+  #148 = Utf8               ()Ljava/lang/invoke/MethodHandles$Lookup;
+  #149 = Utf8               lookupClass
+  #150 = Utf8               ()Ljava/lang/Class;
+  #151 = Utf8               findVirtual
+  #152 = Utf8               (Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+  #153 = Utf8               java/lang/invoke/LambdaMetafactory
+  #154 = Utf8               metafactory
+  #155 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #156 = Utf8               java/lang/invoke/CallSite
+  #157 = Utf8               getTarget
+  #158 = Utf8               ()Ljava/lang/invoke/MethodHandle;
+  #159 = Utf8               java/lang/invoke/MethodHandle
+  #160 = Utf8               invoke
+  #161 = Utf8               org/testng/Assert
+  #162 = Utf8               assertEquals
+  #163 = Utf8               (Ljava/lang/String;Ljava/lang/String;)V
+  #164 = Utf8               printStackTrace
+  #165 = Utf8               getMessage
+  #166 = Utf8               fail
+  #167 = Utf8               (Ljava/lang/String;)V
+  #168 = Utf8               (Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+  #169 = Utf8               findStatic
+  #170 = Methodref          #17.#173      //  demo/jason/invokedynamic/LambdaCallSiteTest.lambda$aaa$0:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #171 = Utf8               (Ljava/lang/String;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+  #172 = NameAndType        #81:#57       //  lambda$new$1:(Ljava/lang/String;)Ljava/lang/String;
+  #173 = NameAndType        #83:#84       //  lambda$aaa$0:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+{
+  java.lang.String name;
+    descriptor: Ljava/lang/String;
+    flags: 
+
+  java.lang.String a;
+    descriptor: Ljava/lang/String;
+    flags: 
+
+  demo.jason.invokedynamic.LambdaCallSiteTest$Foo f;
+    descriptor: Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+    flags: 
+
+  public demo.jason.invokedynamic.LambdaCallSiteTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: ldc           #2                  // String Jason Huang
+         7: putfield      #3                  // Field name:Ljava/lang/String;
+        10: aload_0       
+        11: ldc           #4                  // String abc
+        13: putfield      #5                  // Field a:Ljava/lang/String;
+        16: aload_0       
+        17: aload_0       
+        18: invokedynamic #6,  0              // InvokeDynamic #0:bar:(Ldemo/jason/invokedynamic/LambdaCallSiteTest;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+        23: putfield      #7                  // Field f:Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+        26: return        
+      LineNumberTable:
+        line 15: 0
+        line 17: 4
+        line 74: 10
+        line 75: 16
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      27     0  this   Ldemo/jason/invokedynamic/LambdaCallSiteTest;
+
+  private java.lang.String sayHello(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    flags: ACC_PRIVATE
+    Code:
+      stack=2, locals=2, args_size=2
+         0: new           #8                  // class java/lang/StringBuilder
+         3: dup           
+         4: invokespecial #9                  // Method java/lang/StringBuilder."<init>":()V
+         7: ldc           #10                 // String Hello, 
+         9: invokevirtual #11                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        12: aload_1       
+        13: invokevirtual #11                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        16: invokevirtual #12                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        19: areturn       
+      LineNumberTable:
+        line 24: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Ldemo/jason/invokedynamic/LambdaCallSiteTest;
+            0      20     1  name   Ljava/lang/String;
+
+  private static java.lang.String sayHelloStatic(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    flags: ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: new           #8                  // class java/lang/StringBuilder
+         3: dup           
+         4: invokespecial #9                  // Method java/lang/StringBuilder."<init>":()V
+         7: ldc           #13                 // String Hello static, 
+         9: invokevirtual #11                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        12: aload_0       
+        13: invokevirtual #11                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        16: invokevirtual #12                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        19: areturn       
+      LineNumberTable:
+        line 28: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  name   Ljava/lang/String;
+
+  public void testLambdaCallSiteWithPrivateInstanceMethod();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=8, args_size=1
+         0: ldc           #14                 // class java/lang/String
+         2: ldc           #14                 // class java/lang/String
+         4: invokestatic  #15                 // Method java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+         7: astore_1      
+         8: ldc           #16                 // class demo/jason/invokedynamic/LambdaCallSiteTest$Foo
+        10: ldc           #17                 // class demo/jason/invokedynamic/LambdaCallSiteTest
+        12: invokestatic  #15                 // Method java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+        15: astore_2      
+        16: invokestatic  #18                 // Method java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+        19: astore_3      
+        20: aload_3       
+        21: invokevirtual #19                 // Method java/lang/invoke/MethodHandles$Lookup.lookupClass:()Ljava/lang/Class;
+        24: astore        4
+        26: aload_3       
+        27: aload         4
+        29: ldc           #20                 // String sayHello
+        31: ldc           #14                 // class java/lang/String
+        33: ldc           #14                 // class java/lang/String
+        35: invokestatic  #15                 // Method java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+        38: invokevirtual #21                 // Method java/lang/invoke/MethodHandles$Lookup.findVirtual:(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+        41: astore        5
+        43: aload_3       
+        44: ldc           #22                 // String bar
+        46: aload_2       
+        47: aload_1       
+        48: aload         5
+        50: aload_1       
+        51: invokestatic  #23                 // Method java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+        54: astore        6
+        56: aload         6
+        58: invokevirtual #24                 // Method java/lang/invoke/CallSite.getTarget:()Ljava/lang/invoke/MethodHandle;
+        61: aload_0       
+        62: invokevirtual #25                 // Method java/lang/invoke/MethodHandle.invoke:(Ldemo/jason/invokedynamic/LambdaCallSiteTest;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+        65: astore        7
+        67: aload         7
+        69: ldc           #26                 // String Jason
+        71: invokeinterface #27,  2           // InterfaceMethod demo/jason/invokedynamic/LambdaCallSiteTest$Foo.bar:(Ljava/lang/String;)Ljava/lang/String;
+        76: ldc           #28                 // String Hello, Jason
+        78: invokestatic  #29                 // Method org/testng/Assert.assertEquals:(Ljava/lang/String;Ljava/lang/String;)V
+        81: goto          96
+        84: astore_1      
+        85: aload_1       
+        86: invokevirtual #31                 // Method java/lang/Throwable.printStackTrace:()V
+        89: aload_1       
+        90: invokevirtual #32                 // Method java/lang/Throwable.getMessage:()Ljava/lang/String;
+        93: invokestatic  #33                 // Method org/testng/Assert.fail:(Ljava/lang/String;)V
+        96: return        
+      Exception table:
+         from    to  target type
+             0    81    84   Class java/lang/Throwable
+      LineNumberTable:
+        line 33: 0
+        line 34: 8
+        line 36: 16
+        line 37: 20
+        line 38: 26
+        line 39: 35
+        line 38: 38
+        line 40: 43
+        line 42: 56
+        line 43: 67
+        line 47: 81
+        line 44: 84
+        line 45: 85
+        line 46: 89
+        line 48: 96
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            8      73     1  type   Ljava/lang/invoke/MethodType;
+           16      65     2 invokedtype   Ljava/lang/invoke/MethodType;
+           20      61     3 lookup   Ljava/lang/invoke/MethodHandles$Lookup;
+           26      55     4 thisClass   Ljava/lang/Class;
+           43      38     5 sayHello   Ljava/lang/invoke/MethodHandle;
+           56      25     6 callsite   Ljava/lang/invoke/CallSite;
+           67      14     7     r   Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+           85      11     1     t   Ljava/lang/Throwable;
+            0      97     0  this   Ldemo/jason/invokedynamic/LambdaCallSiteTest;
+      StackMapTable: number_of_entries = 2
+           frame_type = 247 /* same_locals_1_stack_item_frame_extended */
+          offset_delta = 84
+          stack = [ class java/lang/Throwable ]
+           frame_type = 11 /* same */
+
+
+  public void testLambdaCallSiteWithPrivateStaticInstanceMethod();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=8, args_size=1
+         0: ldc           #14                 // class java/lang/String
+         2: ldc           #14                 // class java/lang/String
+         4: invokestatic  #15                 // Method java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+         7: astore_1      
+         8: ldc           #16                 // class demo/jason/invokedynamic/LambdaCallSiteTest$Foo
+        10: invokestatic  #34                 // Method java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+        13: astore_2      
+        14: invokestatic  #18                 // Method java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+        17: astore_3      
+        18: aload_3       
+        19: invokevirtual #19                 // Method java/lang/invoke/MethodHandles$Lookup.lookupClass:()Ljava/lang/Class;
+        22: astore        4
+        24: aload_3       
+        25: aload         4
+        27: ldc           #35                 // String sayHelloStatic
+        29: ldc           #14                 // class java/lang/String
+        31: ldc           #14                 // class java/lang/String
+        33: invokestatic  #15                 // Method java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+        36: invokevirtual #36                 // Method java/lang/invoke/MethodHandles$Lookup.findStatic:(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+        39: astore        5
+        41: aload_3       
+        42: ldc           #22                 // String bar
+        44: aload_2       
+        45: aload_1       
+        46: aload         5
+        48: aload_1       
+        49: invokestatic  #23                 // Method java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+        52: astore        6
+        54: aload         6
+        56: invokevirtual #24                 // Method java/lang/invoke/CallSite.getTarget:()Ljava/lang/invoke/MethodHandle;
+        59: invokevirtual #37                 // Method java/lang/invoke/MethodHandle.invoke:()Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+        62: astore        7
+        64: aload         7
+        66: ldc           #26                 // String Jason
+        68: invokeinterface #27,  2           // InterfaceMethod demo/jason/invokedynamic/LambdaCallSiteTest$Foo.bar:(Ljava/lang/String;)Ljava/lang/String;
+        73: ldc           #38                 // String Hello static, Jason
+        75: invokestatic  #29                 // Method org/testng/Assert.assertEquals:(Ljava/lang/String;Ljava/lang/String;)V
+        78: goto          93
+        81: astore_1      
+        82: aload_1       
+        83: invokevirtual #31                 // Method java/lang/Throwable.printStackTrace:()V
+        86: aload_1       
+        87: invokevirtual #32                 // Method java/lang/Throwable.getMessage:()Ljava/lang/String;
+        90: invokestatic  #33                 // Method org/testng/Assert.fail:(Ljava/lang/String;)V
+        93: return        
+      Exception table:
+         from    to  target type
+             0    78    81   Class java/lang/Throwable
+      LineNumberTable:
+        line 52: 0
+        line 53: 8
+        line 54: 14
+        line 55: 18
+        line 56: 24
+        line 57: 33
+        line 56: 36
+        line 58: 41
+        line 60: 54
+        line 61: 64
+        line 65: 78
+        line 62: 81
+        line 63: 82
+        line 64: 86
+        line 66: 93
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            8      70     1  type   Ljava/lang/invoke/MethodType;
+           14      64     2 invokedtype   Ljava/lang/invoke/MethodType;
+           18      60     3 lookup   Ljava/lang/invoke/MethodHandles$Lookup;
+           24      54     4 thisClass   Ljava/lang/Class;
+           41      37     5 sayHello   Ljava/lang/invoke/MethodHandle;
+           54      24     6 callsite   Ljava/lang/invoke/CallSite;
+           64      14     7     r   Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+           82      11     1     t   Ljava/lang/Throwable;
+            0      94     0  this   Ldemo/jason/invokedynamic/LambdaCallSiteTest;
+      StackMapTable: number_of_entries = 2
+           frame_type = 247 /* same_locals_1_stack_item_frame_extended */
+          offset_delta = 81
+          stack = [ class java/lang/Throwable ]
+           frame_type = 11 /* same */
+
+
+  public demo.jason.invokedynamic.LambdaCallSiteTest$Foo aaa();
+    descriptor: ()Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=3, args_size=1
+         0: ldc           #39                 // String local
+         2: astore_1      
+         3: aload_1       
+         4: invokedynamic #40,  0             // InvokeDynamic #1:bar:(Ljava/lang/String;)Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+         9: astore_2      
+        10: aload_2       
+        11: areturn       
+      LineNumberTable:
+        line 69: 0
+        line 70: 3
+        line 71: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      12     0  this   Ldemo/jason/invokedynamic/LambdaCallSiteTest;
+            3       9     1 local   Ljava/lang/String;
+           10       2     2     f   Ldemo/jason/invokedynamic/LambdaCallSiteTest$Foo;
+
+  private java.lang.String lambda$new$1(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    flags: ACC_PRIVATE, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: new           #8                  // class java/lang/StringBuilder
+         3: dup           
+         4: invokespecial #9                  // Method java/lang/StringBuilder."<init>":()V
+         7: aload_1       
+         8: invokevirtual #11                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        11: aload_0       
+        12: getfield      #5                  // Field a:Ljava/lang/String;
+        15: invokevirtual #11                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        18: invokevirtual #12                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        21: areturn       
+      LineNumberTable:
+        line 75: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      22     0  this   Ldemo/jason/invokedynamic/LambdaCallSiteTest;
+            0      22     1     s   Ljava/lang/String;
+
+  private static java.lang.String lambda$aaa$0(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    flags: ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=2, args_size=2
+         0: aload_0       
+         1: areturn       
+      LineNumberTable:
+        line 70: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       2     1     s   Ljava/lang/String;
+}
