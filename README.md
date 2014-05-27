@@ -7,6 +7,10 @@ Test cases are located under src/test directory.
 
 git repository:  https://github.com/smilingjason/lambda-dive
 
+Usage
+-----
+mvn test 
+This cmd will run all test cases under src/test directory.
 
 Stream, Laziness, Parralel 
 --------------------------
